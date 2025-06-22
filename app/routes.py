@@ -46,7 +46,7 @@ async def add_project(data: schemas.ProjectBase, db: Session = Depends(get_db)):
 
 
 # @router.post("/v1/chat", response_class=StreamingResponse)
-@router.post("/v1/chat", response_model=schemas.ChatResponse)
+@router.post("/chat", response_model=schemas.ChatResponse)
 async def chat(query: schemas.ChatRequest, db: Session = Depends(get_db)):
     if not query.query:
         raise HTTPException(status_code=400, detail="Query cannot be empty")
