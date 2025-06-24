@@ -18,8 +18,8 @@ services:
     image: ankane/pgvector
     environment:
       - POSTGRES_USER=postgres
-      - POSTGRES_PASSWORD=mwy25
-      - POSTGRES_DB=projdata
+      - POSTGRES_PASSWORD=mwy
+      - POSTGRES_DB=ragarchive
     ports:
       - "5432:5432"
     volumes:

@@ -1,6 +1,5 @@
 from fastapi import Depends, HTTPException, APIRouter
 from sqlalchemy.orm import Session
-# from fastapi.responses import StreamingResponse
 
 from app import models, schemas
 from app.db import get_db
@@ -44,8 +43,6 @@ async def add_project(data: schemas.ProjectBase, db: Session = Depends(get_db)):
         raise HTTPException(status_code=500, detail=f"Failed to add project: {str(e)}")
 
 
-
-# @router.post("/v1/chat", response_class=StreamingResponse)
 @router.post("/chat", response_model=schemas.ChatResponse)
 async def chat(query: schemas.ChatRequest, db: Session = Depends(get_db)):
     if not query.query:
@@ -59,16 +56,5 @@ async def chat(query: schemas.ChatRequest, db: Session = Depends(get_db)):
     if not similar_projects:
         raise HTTPException(status_code=400, detail="No projects found")
     
-    # async def stream_res():
-    #     try:
-    #         async for chunk in llm_response(query.query, similar_projects):
-    #             yield f"data: {chunk}\n\n"
-    #     except Exception as e:
-    #         yield f"data: {str(e)}\n\n"
-    #         yield f"data: [DONE]\n\n"
-
-    # return StreamingResponse(stream_res(), media_type="text/event-stream")
-
     response = await llm_response(query.query, similar_projects)
-
     return {"response": response}

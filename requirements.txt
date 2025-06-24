@@ -3,13 +3,10 @@ uvicorn
 sqlalchemy
 psycopg[binary]
 pgvector
-passlib[bcrypt]
 python-multipart
 python-dotenv
 langchain-huggingface
 sentence-transformers
-scikit-learn
 together
 pydantic
 typing-extensions
-email-validator
