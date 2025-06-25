@@ -13,7 +13,7 @@ class ProjectBase(BaseModel):
     supervisor: str
     description: str
     tools: List[str]
-    team_members: List[str]  # Added new field
+    team_members: List[str]
     year: int
 
     @field_validator('year')
@@ -29,7 +29,7 @@ class ProjectResponse(BaseModel):
     supervisor: str
     description: str
     tools: List[str]
-    team_members: List[str]  # Added new field
+    team_members: List[str]
     year: int
 
     class Config:
