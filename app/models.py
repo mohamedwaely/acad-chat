@@ -13,3 +13,5 @@ class Project(Base):
     supervisor = Column(String(100), nullable=False)
     year = Column(Integer, nullable=False)
     embedding = Column(Vector(768), nullable=False)
+
+    
