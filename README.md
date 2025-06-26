@@ -12,6 +12,11 @@ https://www.youtube.com/watch?v=oWTKxfpSTA8
 
 ## ScreenShots
 ![chat-interface](./images/chat-interface.png)
+![message](./images/message.png)
+![analysis](./images/analysis.png)
+![response](./images/response.png)
+![response-2](./images/response-2.png)
+![response-3](./images/response-3.png)
 
 ## Quick Start
 
