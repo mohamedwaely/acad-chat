@@ -10,8 +10,6 @@ This tool analyzes university student projects and identifies which ones have co
 
 https://www.youtube.com/watch?v=oWTKxfpSTA8
 
-## ScreenShots
-![chat-interface](./images/chat-interface.png)
 
 ## Quick Start
 
